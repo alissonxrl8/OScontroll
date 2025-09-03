@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return ['Laravel' => app()->version()];
-    'oiiii'
+    return 'Servidor Laravel no ar! 🚀';
 });
+
 
 require __DIR__.'/auth.php';
