@@ -21,3 +21,5 @@ Route::group(['middleware' => ['auth:sanctum']], function(){
 });
 
 Route::resource('lojas', LojaController::class);
+
+Route::post('test', [UsuariosController::class, 'criarUser']);
