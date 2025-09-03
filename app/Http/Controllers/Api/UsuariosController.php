@@ -20,14 +20,16 @@ class UsuariosController extends Controller
             'name' => 'required|string',
             'email' => 'required|unique:users,email|email',
             'password' => 'required|min:6',
-            'level' => 'numeric'
+            'level' => 'numeric',
+            'id_loja'=>'required'
         ]);
 
         $user = User::create([
             'name' => $validados['name'],
             'email' => $validados['email'],
             'password' => Hash::make($validados['password']),
-            'level' => $validados['level']
+            'level' => $validados['level'],
+            'id_loja' => $validados['id_loja'],
         ]);
 
         return response()->json([
