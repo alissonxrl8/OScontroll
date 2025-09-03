@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+Route::get('/test', function () {
     return 'Servidor Laravel no ar! 🚀';
 });
 
