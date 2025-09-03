@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::post('/', [LoginController::class, 'login'])->name('login');
+Route::post('/', [LoginController::class, 'login'])->name('login.api');
 Route::group(['middleware' => ['auth:sanctum']], function(){
     Route::get('usuarios', [UsuariosController::class, 'index'])->middleware('can:acesso_1');
     //acesso level 1
